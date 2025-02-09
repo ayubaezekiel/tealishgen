@@ -1,0 +1,64 @@
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+
+interface HeroSectionProps {
+  title?: string;
+  subtitle?: string;
+  ctaText?: string;
+  onCtaClick?: () => void;
+}
+
+const HeroSection = ({
+  title = "Build Smart Contracts Visually",
+  subtitle = "Drag-and-drop smart contract generator for Algorand blockchain. Simplify Tealish development through an intuitive visual interface.",
+  ctaText = "Get Started",
+  onCtaClick = () => console.log("CTA clicked"),
+}: HeroSectionProps) => {
+  return (
+    <section className="min-h-[800px] w-full bg-background flex items-center justify-center relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 bg-[linear-gradient(30deg,#00aed1_12%,transparent_12.5%,transparent_87.5%,#00aed1_87.5%,#00aed1),linear-gradient(150deg,#00aed1_12%,transparent_12.5%,transparent_87.5%,#00aed1_87.5%,#00aed1),linear-gradient(30deg,#00aed1_12%,transparent_12.5%,transparent_87.5%,#00aed1_87.5%,#00aed1),linear-gradient(150deg,#00aed1_12%,transparent_12.5%,transparent_87.5%,#00aed1_87.5%,#00aed1),linear-gradient(60deg,#00aed177_25%,transparent_25.5%,transparent_75%,#00aed177_75%,#00aed177)] bg-[length:80px_140px]" />
+      </div>
+
+      <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-between gap-12 z-10">
+        {/* Text Content */}
+        <motion.div
+          className="flex-1 text-center lg:text-left"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+            {title}
+          </h1>
+          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl">
+            {subtitle}
+          </p>
+          <Button size="lg" onClick={onCtaClick} className="text-lg px-8 py-6">
+            {ctaText}
+          </Button>
+        </motion.div>
+
+        {/* Animated Illustration */}
+        <motion.div
+          className="flex-1"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+          <div className="relative w-full max-w-[600px] aspect-square mx-auto">
+            {/* Placeholder for animated illustration */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full animate-pulse">
+              <div className="absolute inset-4 bg-gradient-to-tr from-primary/30 to-transparent rounded-full animate-pulse delay-75" />
+              <div className="absolute inset-8 bg-gradient-to-bl from-primary/40 to-transparent rounded-full animate-pulse delay-150" />
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
