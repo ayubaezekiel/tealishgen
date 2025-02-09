@@ -1,5 +1,6 @@
 import { DiscordLogoIcon } from "@radix-ui/react-icons";
 import { Twitter, MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -17,20 +18,20 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Links</h4>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="/roadmap"
+                <Link
+                  to="/roadmap"
                   className="text-sm text-muted-foreground hover:text-foreground"
                 >
                   Roadmap
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/token"
+                <Link
+                  to="#"
                   className="text-sm text-muted-foreground hover:text-foreground"
                 >
                   Buy Token
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
