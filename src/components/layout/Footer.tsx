@@ -1,6 +1,5 @@
 import { DiscordLogoIcon } from "@radix-ui/react-icons";
 import { Twitter, MessageCircle } from "lucide-react";
-
 const Footer = () => {
   return (
     <footer className="w-full py-12 bg-background border-t">

@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import AnimatedGlobe from "../layout/AnimatedGlobe";
 
 interface HeroSectionProps {
   title?: string;
@@ -49,11 +50,7 @@ const HeroSection = ({
           transition={{ duration: 0.8 }}
         >
           <div className="relative w-full max-w-[600px] aspect-square mx-auto">
-            {/* Placeholder for animated illustration */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full animate-pulse">
-              <div className="absolute inset-4 bg-gradient-to-tr from-primary/30 to-transparent rounded-full animate-pulse delay-75" />
-              <div className="absolute inset-8 bg-gradient-to-bl from-primary/40 to-transparent rounded-full animate-pulse delay-150" />
-            </div>
+            <AnimatedGlobe />
           </div>
         </motion.div>
       </div>
