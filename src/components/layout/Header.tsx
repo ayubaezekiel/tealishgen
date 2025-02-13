@@ -11,19 +11,16 @@ const Header = () => {
           <a href="/" className="text-xl font-bold text-foreground">
             TealGen
           </a>
-          <nav className="hidden md:flex gap-6">
+          <nav className="hidden md:flex items-center gap-6">
             <a
               href="/roadmap"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               Roadmap
             </a>
-            <a
-              href="/token"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Buy Token
-            </a>
+            <Button asChild variant="outline">
+              <a href="/token">Buy Token</a>
+            </Button>
           </nav>
         </div>
 
