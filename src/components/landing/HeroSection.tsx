@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import AnimatedGlobe from "../layout/AnimatedGlobe";
+import { Link } from "react-router-dom";
 
 interface HeroSectionProps {
   title?: string;
@@ -37,8 +38,19 @@ const HeroSection = ({
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl">
             {subtitle}
           </p>
-          <Button size="lg" onClick={onCtaClick} className="text-lg px-8 py-6">
-            {ctaText}
+          <Button
+            asChild
+            size="lg"
+            onClick={onCtaClick}
+            className="text-lg px-8 py-6"
+          >
+            <Link
+              to={"https://tealgen.vercel.app/"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {ctaText}
+            </Link>
           </Button>
         </motion.div>
 
