@@ -24,42 +24,42 @@ const InteractiveDemo = ({
       id: "1",
       title: "Visual Editor",
       description: "Design your contract visually",
-      position: { x: 100, y: 50 },
+      position: { x: 30, y: 30 },
       icon: <Workflow className="w-5 h-5 text-primary" />,
     },
     {
       id: "2",
       title: "State Management",
       description: "Define contract state",
-      position: { x: 400, y: 50 },
+      position: { x: 170, y: 30 },
       icon: <Database className="w-5 h-5 text-primary" />,
     },
     {
       id: "3",
       title: "Generate Code",
       description: "Convert to Tealish",
-      position: { x: 250, y: 200 },
+      position: { x: 100, y: 120 },
       icon: <Code2 className="w-5 h-5 text-primary" />,
     },
     {
       id: "4",
       title: "Test Contract",
       description: "Run automated tests",
-      position: { x: 100, y: 350 },
+      position: { x: 30, y: 210 },
       icon: <Play className="w-5 h-5 text-primary" />,
     },
     {
       id: "5",
       title: "Copy Code",
       description: "Get the Tealish code",
-      position: { x: 400, y: 350 },
+      position: { x: 170, y: 210 },
       icon: <Copy className="w-5 h-5 text-primary" />,
     },
     {
       id: "6",
       title: "Deploy",
       description: "Deploy to Algorand",
-      position: { x: 250, y: 500 },
+      position: { x: 100, y: 300 },
       icon: <Rocket className="w-5 h-5 text-primary" />,
     },
   ],
@@ -69,11 +69,11 @@ const InteractiveDemo = ({
   const [showCode, setShowCode] = useState(false);
 
   const lines = [
-    { start: { x: 200, y: 100 }, end: { x: 400, y: 100 } },
-    { start: { x: 300, y: 100 }, end: { x: 300, y: 200 } },
-    { start: { x: 250, y: 250 }, end: { x: 150, y: 350 } },
-    { start: { x: 350, y: 250 }, end: { x: 400, y: 350 } },
-    { start: { x: 250, y: 400 }, end: { x: 250, y: 500 } },
+    { start: { x: 80, y: 45 }, end: { x: 170, y: 45 } },
+    { start: { x: 100, y: 60 }, end: { x: 100, y: 120 } },
+    { start: { x: 100, y: 150 }, end: { x: 30, y: 210 } },
+    { start: { x: 100, y: 150 }, end: { x: 170, y: 210 } },
+    { start: { x: 100, y: 240 }, end: { x: 100, y: 300 } },
   ];
 
   const sampleCode = `#pragma version 8
@@ -105,7 +105,7 @@ reject:
   return`;
 
   return (
-    <Card className="relative w-full h-[800px] bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border overflow-hidden">
+    <Card className="relative w-full h-[500px] md:h-[600px] lg:h-[800px] bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern opacity-5" />
 
       {/* Connection Lines */}
@@ -168,7 +168,7 @@ reject:
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="absolute right-8 top-8 w-[400px] bg-background/95 backdrop-blur p-6 rounded-lg border shadow-lg"
+          className="absolute right-4 md:right-8 top-4 md:top-8 w-[280px] md:w-[400px] bg-background/95 backdrop-blur p-4 md:p-6 rounded-lg border shadow-lg"
         >
           <div className="flex justify-between items-center mb-4">
             <h4 className="text-lg font-medium">Generated Tealish Code</h4>

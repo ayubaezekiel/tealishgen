@@ -1,6 +1,6 @@
 import React from "react";
 import HeroSection from "./landing/HeroSection";
-import InteractiveDemo from "./landing/InteractiveDemo";
+import WorkflowDiagram from "./landing/WorkflowDiagram";
 import FeaturesGrid from "./landing/FeaturesGrid";
 
 import { motion } from "framer-motion";
@@ -21,17 +21,16 @@ const Home = ({
     >
       <HeroSection onCtaClick={onGetStarted} />
 
-      <section className="py-24 container mx-auto px-4">
+      <section className="py-12 md:py-24 container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             See How It Works
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Build smart contracts visually with our intuitive drag-and-drop
-            interface
+            Simple steps to build and deploy your smart contracts on Algorand
           </p>
         </div>
-        <InteractiveDemo />
+        <WorkflowDiagram />
       </section>
 
       <FeaturesGrid />

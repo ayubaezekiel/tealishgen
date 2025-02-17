@@ -6,31 +6,29 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="w-full py-4 px-6 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 fixed top-0 z-50">
-      <div className="container mx-auto flex items-center justify-between">
+    <header className="w-full py-4 px-4 md:px-6 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 fixed top-0 z-50">
+      <div className="container mx-auto flex items-center justify-between gap-4">
         <div className="flex items-center gap-8">
           <Link to="/" className="text-xl font-bold text-foreground">
             TealGen
-          </Link>
-          <nav className="hidden md:flex gap-6">
-            <Link
-              to="/roadmap"
+          </a>
+          <nav className="hidden md:flex items-center gap-6">
+            <a
+              href="/roadmap"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               Roadmap
-            </Link>
-            <Link
-              to="#"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Buy Token
+            </a>
+            <Button asChild variant="outline">
+              <a href="/token">Buy Token</a>
+            </Button>
             </Link>
           </nav>
         </div>
 
         <div className="flex items-center gap-4">
           <ThemeToggle />
-          <div className="flex gap-3">
+          <div className="flex gap-2 md:gap-3">
             <a
               href="https://discord.gg"
               target="_blank"

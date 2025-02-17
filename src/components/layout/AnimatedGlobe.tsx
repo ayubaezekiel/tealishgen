@@ -1,16 +1,7 @@
 import { motion } from "framer-motion";
-import { Bitcoin, Code2, FileCode2, Wallet, Coins, Binary } from "lucide-react";
 
 const AnimatedGlobe = () => {
-  const icons = [
-    { Icon: Bitcoin, delay: 0 },
-    { Icon: Code2, delay: 1 },
-    { Icon: FileCode2, delay: 2 },
-    { Icon: Wallet, delay: 3 },
-    { Icon: Coins, delay: 4 },
-    { Icon: Binary, delay: 5 },
-  ];
-
+  
   // Generate random stars
   const stars = Array.from({ length: 50 }, (_, i) => ({
     id: i,
@@ -21,7 +12,9 @@ const AnimatedGlobe = () => {
   }));
 
   return (
-    <div className="relative w-[600px] h-[600px] mx-auto">
+
+    <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[600px] lg:h-[600px] mx-auto">
+
       {/* Stars Background */}
       {stars.map((star) => (
         <motion.div
@@ -109,46 +102,6 @@ const AnimatedGlobe = () => {
           ease: "linear",
         }}
       />
-
-      {/* Orbiting Icons */}
-      {icons.map(({ Icon, delay }, index) => {
-        const angle = (index * 360) / icons.length;
-        return (
-          <motion.div
-            key={index}
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-            animate={{
-              rotate: 360,
-            }}
-            transition={{
-              duration: 15,
-              repeat: Infinity,
-              ease: "linear",
-              delay,
-            }}
-            style={{
-              transformOrigin: "50% 50%",
-            }}
-          >
-            <motion.div
-              animate={{
-                scale: [1, 1.2, 1],
-                opacity: [0.7, 1, 0.7],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            >
-              <Icon
-                className="w-12 h-12 text-primary absolute -left-6 -top-72 drop-shadow-[0_0_10px_rgba(0,174,209,0.5)]"
-                strokeWidth={1.5}
-              />
-            </motion.div>
-          </motion.div>
-        );
-      })}
     </div>
   );
 };

@@ -45,15 +45,15 @@ const WorkflowNode = ({
             }}
           >
             <Card
-              className={`w-[200px] p-4 bg-background border-2 ${isSelected ? "border-primary" : "border-border"} transition-colors`}
+              className={`w-[100px] md:w-[130px] lg:w-[180px] p-2 md:p-3 lg:p-4 bg-background border-2 ${isSelected ? "border-primary" : "border-border"} transition-colors`}
             >
               <div className="flex items-center gap-3">
                 {icon}
                 <div className="flex-1">
-                  <h3 className="font-medium text-sm text-foreground">
+                  <h3 className="font-medium text-[11px] md:text-sm text-foreground leading-tight">
                     {title}
                   </h3>
-                  <p className="text-xs text-muted-foreground truncate">
+                  <p className="text-[10px] md:text-xs text-muted-foreground truncate leading-tight">
                     {description}
                   </p>
                 </div>
