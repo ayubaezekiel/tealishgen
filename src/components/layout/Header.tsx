@@ -11,47 +11,45 @@ const Header = () => {
         <div className="flex items-center gap-8">
           <Link to="/" className="text-xl font-bold text-foreground">
             TealGen
-          </a>
+          </Link>
+
           <nav className="hidden md:flex items-center gap-6">
-            <a
-              href="/roadmap"
+            <Link
+              to="/roadmap"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               Roadmap
-            </a>
-            <Button asChild variant="outline">
-              <a href="/token">Buy Token</a>
-            </Button>
             </Link>
+            <Button variant="outline">Buy Token</Button>
           </nav>
         </div>
 
         <div className="flex items-center gap-4">
           <ThemeToggle />
           <div className="flex gap-2 md:gap-3">
-            <a
-              href="https://discord.gg"
+            <Link
+              to="https://discord.gg"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Button variant="ghost" size="icon">
                 <DiscordLogoIcon className="w-5 h-5" />
               </Button>
-            </a>
-            <a
-              href="https://twitter.com"
+            </Link>
+            <Link
+              to="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Button variant="ghost" size="icon">
                 <Twitter className="w-5 h-5" />
               </Button>
-            </a>
-            <a href="https://t.me" target="_blank" rel="noopener noreferrer">
+            </Link>
+            <Link to="https://t.me" target="_blank" rel="noopener noreferrer">
               <Button variant="ghost" size="icon">
                 <MessageCircle className="w-5 h-5" />
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
