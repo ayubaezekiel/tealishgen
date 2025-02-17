@@ -23,7 +23,7 @@ const HeroSection = ({
         <div className="absolute inset-0 bg-[linear-gradient(30deg,#00aed1_12%,transparent_12.5%,transparent_87.5%,#00aed1_87.5%,#00aed1),linear-gradient(150deg,#00aed1_12%,transparent_12.5%,transparent_87.5%,#00aed1_87.5%,#00aed1),linear-gradient(30deg,#00aed1_12%,transparent_12.5%,transparent_87.5%,#00aed1_87.5%,#00aed1),linear-gradient(150deg,#00aed1_12%,transparent_12.5%,transparent_87.5%,#00aed1_87.5%,#00aed1),linear-gradient(60deg,#00aed177_25%,transparent_25.5%,transparent_75%,#00aed177_75%,#00aed177)] bg-[length:80px_140px]" />
       </div>
 
-      <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-between gap-12 z-10">
+      <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-between gap-12 z-10 py-12 lg:py-0">
         {/* Text Content */}
         <motion.div
           className="flex-1 text-center lg:text-left"
@@ -37,7 +37,11 @@ const HeroSection = ({
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl">
             {subtitle}
           </p>
-          <Button size="lg" onClick={onCtaClick} className="text-lg px-8 py-6">
+          <Button
+            size="lg"
+            onClick={onCtaClick}
+            className="text-lg px-8 py-6 mb-8 md:mb-0"
+          >
             {ctaText}
           </Button>
         </motion.div>

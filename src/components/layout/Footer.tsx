@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="w-full py-12 bg-background border-t">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-foreground">TealGen</h3>
             <p className="text-sm text-muted-foreground">
@@ -36,7 +36,7 @@ const Footer = () => {
 
           <div>
             <h4 className="font-semibold mb-4">Community</h4>
-            <div className="flex gap-4">
+            <div className="flex gap-4 justify-center md:justify-start">
               <a
                 href="https://discord.gg"
                 target="_blank"
