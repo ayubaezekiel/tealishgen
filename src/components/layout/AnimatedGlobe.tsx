@@ -1,16 +1,7 @@
 import { motion } from "framer-motion";
-import { Bitcoin, Code2, FileCode2, Wallet, Coins, Binary } from "lucide-react";
 
 const AnimatedGlobe = () => {
-  const icons = [
-    { Icon: Bitcoin, delay: 0 },
-    { Icon: Code2, delay: 1 },
-    { Icon: FileCode2, delay: 2 },
-    { Icon: Wallet, delay: 3 },
-    { Icon: Coins, delay: 4 },
-    { Icon: Binary, delay: 5 },
-  ];
-
+  
   // Generate random stars
   const stars = Array.from({ length: 50 }, (_, i) => ({
     id: i,
@@ -21,7 +12,9 @@ const AnimatedGlobe = () => {
   }));
 
   return (
+
     <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[600px] lg:h-[600px] mx-auto">
+
       {/* Stars Background */}
       {stars.map((star) => (
         <motion.div

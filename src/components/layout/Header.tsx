@@ -2,13 +2,14 @@ import { Button } from "@/components/ui/button";
 import { DiscordLogoIcon } from "@radix-ui/react-icons";
 import { Twitter, MessageCircle } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <header className="w-full py-4 px-4 md:px-6 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 fixed top-0 z-50">
       <div className="container mx-auto flex items-center justify-between gap-4">
         <div className="flex items-center gap-8">
-          <a href="/" className="text-xl font-bold text-foreground">
+          <Link to="/" className="text-xl font-bold text-foreground">
             TealGen
           </a>
           <nav className="hidden md:flex items-center gap-6">
@@ -21,6 +22,7 @@ const Header = () => {
             <Button asChild variant="outline">
               <a href="/token">Buy Token</a>
             </Button>
+            </Link>
           </nav>
         </div>
 
