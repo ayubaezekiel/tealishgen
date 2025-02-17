@@ -12,7 +12,7 @@ interface RoadmapItem {
 
 const roadmapData: RoadmapItem[] = [
   {
-    quarter: "Q1 2024",
+    quarter: "Q1 2025",
     title: "Foundation",
     description: "Establishing core platform functionality",
     status: "completed",
@@ -23,21 +23,21 @@ const roadmapData: RoadmapItem[] = [
     ],
   },
   {
-    quarter: "Q2 2024",
+    quarter: "Q2 2025",
     title: "Enhanced Features",
     description: "Expanding platform capabilities",
     status: "in-progress",
     items: ["Advanced Node System", "Template Library", "Testing Framework"],
   },
   {
-    quarter: "Q3 2024",
+    quarter: "Q3 2025",
     title: "Ecosystem Growth",
     description: "Building the ecosystem",
     status: "planned",
     items: ["Marketplace Launch", "Developer SDK", "Partnership Program"],
   },
   {
-    quarter: "Q4 2024",
+    quarter: "Q4 2025",
     title: "Enterprise Solutions",
     description: "Scaling for enterprise",
     status: "planned",
