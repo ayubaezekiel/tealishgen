@@ -16,6 +16,7 @@ import { Route as FeaturesImport } from './routes/features'
 import { Route as AboutImport } from './routes/about'
 import { Route as IndexImport } from './routes/index'
 import { Route as MarketplaceIndexImport } from './routes/marketplace/index'
+import { Route as DashboardIndexImport } from './routes/dashboard/index'
 import { Route as MarketplaceContractIdImport } from './routes/marketplace/$contractId'
 
 // Create/Update Routes
@@ -47,6 +48,12 @@ const IndexRoute = IndexImport.update({
 const MarketplaceIndexRoute = MarketplaceIndexImport.update({
   id: '/marketplace/',
   path: '/marketplace/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const DashboardIndexRoute = DashboardIndexImport.update({
+  id: '/dashboard/',
+  path: '/dashboard/',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -95,6 +102,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MarketplaceContractIdImport
       parentRoute: typeof rootRoute
     }
+    '/dashboard/': {
+      id: '/dashboard/'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardIndexImport
+      parentRoute: typeof rootRoute
+    }
     '/marketplace/': {
       id: '/marketplace/'
       path: '/marketplace'
@@ -113,6 +127,7 @@ export interface FileRoutesByFullPath {
   '/features': typeof FeaturesRoute
   '/roadmap': typeof RoadmapRoute
   '/marketplace/$contractId': typeof MarketplaceContractIdRoute
+  '/dashboard': typeof DashboardIndexRoute
   '/marketplace': typeof MarketplaceIndexRoute
 }
 
@@ -122,6 +137,7 @@ export interface FileRoutesByTo {
   '/features': typeof FeaturesRoute
   '/roadmap': typeof RoadmapRoute
   '/marketplace/$contractId': typeof MarketplaceContractIdRoute
+  '/dashboard': typeof DashboardIndexRoute
   '/marketplace': typeof MarketplaceIndexRoute
 }
 
@@ -132,6 +148,7 @@ export interface FileRoutesById {
   '/features': typeof FeaturesRoute
   '/roadmap': typeof RoadmapRoute
   '/marketplace/$contractId': typeof MarketplaceContractIdRoute
+  '/dashboard/': typeof DashboardIndexRoute
   '/marketplace/': typeof MarketplaceIndexRoute
 }
 
@@ -143,6 +160,7 @@ export interface FileRouteTypes {
     | '/features'
     | '/roadmap'
     | '/marketplace/$contractId'
+    | '/dashboard'
     | '/marketplace'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -151,6 +169,7 @@ export interface FileRouteTypes {
     | '/features'
     | '/roadmap'
     | '/marketplace/$contractId'
+    | '/dashboard'
     | '/marketplace'
   id:
     | '__root__'
@@ -159,6 +178,7 @@ export interface FileRouteTypes {
     | '/features'
     | '/roadmap'
     | '/marketplace/$contractId'
+    | '/dashboard/'
     | '/marketplace/'
   fileRoutesById: FileRoutesById
 }
@@ -169,6 +189,7 @@ export interface RootRouteChildren {
   FeaturesRoute: typeof FeaturesRoute
   RoadmapRoute: typeof RoadmapRoute
   MarketplaceContractIdRoute: typeof MarketplaceContractIdRoute
+  DashboardIndexRoute: typeof DashboardIndexRoute
   MarketplaceIndexRoute: typeof MarketplaceIndexRoute
 }
 
@@ -178,6 +199,7 @@ const rootRouteChildren: RootRouteChildren = {
   FeaturesRoute: FeaturesRoute,
   RoadmapRoute: RoadmapRoute,
   MarketplaceContractIdRoute: MarketplaceContractIdRoute,
+  DashboardIndexRoute: DashboardIndexRoute,
   MarketplaceIndexRoute: MarketplaceIndexRoute,
 }
 
@@ -196,6 +218,7 @@ export const routeTree = rootRoute
         "/features",
         "/roadmap",
         "/marketplace/$contractId",
+        "/dashboard/",
         "/marketplace/"
       ]
     },
@@ -213,6 +236,9 @@ export const routeTree = rootRoute
     },
     "/marketplace/$contractId": {
       "filePath": "marketplace/$contractId.tsx"
+    },
+    "/dashboard/": {
+      "filePath": "dashboard/index.tsx"
     },
     "/marketplace/": {
       "filePath": "marketplace/index.tsx"
