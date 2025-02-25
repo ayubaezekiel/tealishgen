@@ -23,9 +23,9 @@ export const Route = createRootRoute({
         content: "width=device-width, initial-scale=1",
       },
       ...seo({
-        title:
-          "TanStack Start | Type-Safe, Client-First, Full-Stack React Framework",
-        description: `TanStack Start is a type-safe, client-first, full-stack React framework. `,
+        title: "TealishGen | Modern Smart Contract Generator",
+        description:
+          "Create beautiful and harmonious smart contract for your next project with TealishGen. A modern, easy-to-use color palette generator with export options.",
       }),
     ],
     links: [
