@@ -8,7 +8,6 @@ import {
   Scripts,
   createRootRoute,
 } from "@tanstack/react-router";
-import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 import * as React from "react";
 import appCss from "./../index.css?url";
 
@@ -76,7 +75,6 @@ function RootDocument({ children }: { children: React.ReactNode }) {
           {children}
           <Footer />
         </ThemeProvider>
-        <TanStackRouterDevtools position="bottom-right" />
         <Scripts />
       </body>
     </html>
