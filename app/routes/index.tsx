@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import FeaturesGrid from "@/components/landing/FeaturesGrid";
 import HeroSection from "@/components/landing/HeroSection";
 import WorkflowDiagram from "@/components/landing/WorkflowDiagram";
@@ -237,14 +237,16 @@ const Index = ({
           <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
             Ready to Build Your First Smart Contract?
           </h3>
-          <Button
-            size="lg"
-            onClick={onGetStarted}
-            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-6 text-lg rounded-full"
-          >
-            Get Started Now
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          <Link to="/marketplace">
+            <Button
+              size="lg"
+              onClick={onGetStarted}
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-6 text-lg rounded-full"
+            >
+              Get Started Now
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </Link>
         </motion.div>
       </section>
 
