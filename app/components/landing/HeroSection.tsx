@@ -26,7 +26,7 @@ const HeroSection = ({
       <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-between gap-12 z-10 py-12 lg:py-0">
         {/* Text Content */}
         <motion.div
-          className="flex-1 text-center lg:text-left"
+          className="flex-1 text-center lg:text-left mt-14"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -49,7 +49,7 @@ const HeroSection = ({
 
         {/* Animated Illustration */}
         <motion.div
-          className="flex-1"
+          className="flex-1 mt-20"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
