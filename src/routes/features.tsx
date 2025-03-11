@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -7,14 +6,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import {
-  CheckCircle,
-  Zap,
-  Shield,
-  BarChart3,
-  RefreshCw,
-  Globe,
-} from "lucide-react";
+import { createFileRoute } from "@tanstack/react-router";
+import { Zap } from "lucide-react";
 
 export const Route = createFileRoute("/features")({
   component: RouteComponent,
@@ -25,13 +18,13 @@ function RouteComponent() {
 }
 
 import {
+  ArrowRightLeft,
+  Blocks,
+  Brain,
   Code,
   Cpu,
-  Wand2,
-  Blocks,
-  ArrowRightLeft,
   ShieldCheck,
-  Brain,
+  Wand2,
 } from "lucide-react";
 
 // Custom drag and drop icon
