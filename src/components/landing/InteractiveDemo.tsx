@@ -15,7 +15,6 @@ interface Node {
 
 interface InteractiveDemoProps {
   nodes?: Node[];
-  onNodeConnect?: (sourceId: string, targetId: string) => void;
 }
 
 const InteractiveDemo = ({
@@ -63,7 +62,6 @@ const InteractiveDemo = ({
       icon: <Rocket className="w-5 h-5 text-primary" />,
     },
   ],
-  onNodeConnect = () => {},
 }: InteractiveDemoProps) => {
   const [selectedNode, setSelectedNode] = useState<string | null>(null);
   const [showCode, setShowCode] = useState(false);
