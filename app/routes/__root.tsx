@@ -78,7 +78,10 @@ export const Route = createRootRouteWithContext<{
 function RootComponent() {
   return (
     <RootDocument>
-      <Outlet />
+      <main className="mt-24">
+        {" "}
+        <Outlet />
+      </main>
     </RootDocument>
   );
 }
