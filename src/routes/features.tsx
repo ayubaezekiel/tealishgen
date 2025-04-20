@@ -119,22 +119,6 @@ const FeaturesPage = () => {
       </div>
 
       {/* Visual Demo Section */}
-      <div className="mb-16 relative overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800">
-        <div className="aspect-video bg-slate-100 dark:bg-slate-900 flex items-center justify-center">
-          <div className="text-center p-4">
-            <img
-              src="/api/placeholder/800/450"
-              alt="TealGen Interface Demo"
-              className="mx-auto rounded-lg shadow-lg"
-            />
-          </div>
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background to-transparent p-6 pt-16">
-          <Button className="bg-gradient-to-r from-teal-500 to-cyan-400 hover:from-teal-600 hover:to-cyan-500 text-white">
-            Watch Demo
-          </Button>
-        </div>
-      </div>
 
       {/* Main Features Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
@@ -393,12 +377,6 @@ const FeaturesPage = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button className="bg-white text-teal-600 hover:bg-slate-100">
             Start Building Free
-          </Button>
-          <Button
-            variant="outline"
-            className="border-white text-white hover:bg-white/10"
-          >
-            Schedule Demo
           </Button>
         </div>
       </div>

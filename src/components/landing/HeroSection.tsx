@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import AnimatedGlobe from "../layout/AnimatedGlobe";
-import { Link } from "@tanstack/react-router";
 
 interface HeroSectionProps {
   title?: string;
@@ -43,7 +42,7 @@ const HeroSection = ({
             onClick={onCtaClick}
             className="text-lg px-8 py-6 mb-8 md:mb-0"
           >
-            <Link to={"/marketplace"}>{ctaText}</Link>
+            {ctaText}
           </Button>
         </motion.div>
 
