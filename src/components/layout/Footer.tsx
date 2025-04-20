@@ -1,4 +1,4 @@
-import { Twitter, MessageCircle, DiscIcon } from "lucide-react";
+import { Twitter, DiscIcon } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 
 const Footer = () => {
@@ -39,7 +39,7 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Community</h4>
             <div className="flex gap-4 justify-center md:justify-start">
               <a
-                href="https://discord.gg"
+                href="https://discord.gg/EHhyxu9v"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground"
@@ -53,14 +53,6 @@ const Footer = () => {
                 className="text-muted-foreground hover:text-foreground"
               >
                 <Twitter className="w-5 h-5" />
-              </a>
-              <a
-                href="https://t.me"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                <MessageCircle className="w-5 h-5" />
               </a>
             </div>
           </div>

@@ -13,7 +13,6 @@
 import { Route as rootRoute } from './routes/__root'
 import { Route as RoadmapImport } from './routes/roadmap'
 import { Route as FeaturesImport } from './routes/features'
-import { Route as AboutImport } from './routes/about'
 import { Route as IndexImport } from './routes/index'
 import { Route as MarketplaceIndexImport } from './routes/marketplace/index'
 import { Route as MarketplaceContractIdImport } from './routes/marketplace/$contractId'
@@ -29,12 +28,6 @@ const RoadmapRoute = RoadmapImport.update({
 const FeaturesRoute = FeaturesImport.update({
   id: '/features',
   path: '/features',
-  getParentRoute: () => rootRoute,
-} as any)
-
-const AboutRoute = AboutImport.update({
-  id: '/about',
-  path: '/about',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -65,13 +58,6 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexImport
-      parentRoute: typeof rootRoute
-    }
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutImport
       parentRoute: typeof rootRoute
     }
     '/features': {
@@ -109,7 +95,6 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
   '/features': typeof FeaturesRoute
   '/roadmap': typeof RoadmapRoute
   '/marketplace/$contractId': typeof MarketplaceContractIdRoute
@@ -118,7 +103,6 @@ export interface FileRoutesByFullPath {
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
   '/features': typeof FeaturesRoute
   '/roadmap': typeof RoadmapRoute
   '/marketplace/$contractId': typeof MarketplaceContractIdRoute
@@ -128,7 +112,6 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
   '/features': typeof FeaturesRoute
   '/roadmap': typeof RoadmapRoute
   '/marketplace/$contractId': typeof MarketplaceContractIdRoute
@@ -139,7 +122,6 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/about'
     | '/features'
     | '/roadmap'
     | '/marketplace/$contractId'
@@ -147,7 +129,6 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/about'
     | '/features'
     | '/roadmap'
     | '/marketplace/$contractId'
@@ -155,7 +136,6 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
-    | '/about'
     | '/features'
     | '/roadmap'
     | '/marketplace/$contractId'
@@ -165,7 +145,6 @@ export interface FileRouteTypes {
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AboutRoute: typeof AboutRoute
   FeaturesRoute: typeof FeaturesRoute
   RoadmapRoute: typeof RoadmapRoute
   MarketplaceContractIdRoute: typeof MarketplaceContractIdRoute
@@ -174,7 +153,6 @@ export interface RootRouteChildren {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AboutRoute: AboutRoute,
   FeaturesRoute: FeaturesRoute,
   RoadmapRoute: RoadmapRoute,
   MarketplaceContractIdRoute: MarketplaceContractIdRoute,
@@ -192,7 +170,6 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
-        "/about",
         "/features",
         "/roadmap",
         "/marketplace/$contractId",
@@ -201,9 +178,6 @@ export const routeTree = rootRoute
     },
     "/": {
       "filePath": "index.tsx"
-    },
-    "/about": {
-      "filePath": "about.tsx"
     },
     "/features": {
       "filePath": "features.tsx"

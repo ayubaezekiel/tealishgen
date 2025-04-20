@@ -34,12 +34,6 @@ const Header = () => {
             >
               Features
             </Link>
-            <Link
-              to="/about"
-              className="text-muted-foreground hover:text-foreground transition-colors font-medium"
-            >
-              About
-            </Link>
           </nav>
         </div>
 
@@ -127,13 +121,7 @@ const Header = () => {
             >
               Features
             </Link>
-            <Link
-              to="/about"
-              className="text-foreground py-2 px-4 hover:bg-muted rounded-md transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              About
-            </Link>
+
             <Button className="bg-gradient-to-r from-teal-500 to-cyan-400 hover:from-teal-600 hover:to-cyan-500 text-white font-medium mt-2">
               Buy Token
             </Button>
