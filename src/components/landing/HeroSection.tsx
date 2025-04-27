@@ -1,7 +1,5 @@
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import AnimatedGlobe from "../layout/AnimatedGlobe";
-import { Link } from "@tanstack/react-router";
 
 interface HeroSectionProps {
   title?: string;
@@ -13,8 +11,6 @@ interface HeroSectionProps {
 const HeroSection = ({
   title = "Build Smart Contracts Visually",
   subtitle = "Drag-and-drop smart contract generator for Algorand blockchain. Simplify Tealish development through an intuitive visual interface.",
-  ctaText = "Get Started",
-  onCtaClick = () => console.log("CTA clicked"),
 }: HeroSectionProps) => {
   return (
     <section className="min-h-[800px] w-full bg-background flex items-center justify-center relative overflow-hidden">
@@ -37,14 +33,6 @@ const HeroSection = ({
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl">
             {subtitle}
           </p>
-          <Button
-            size="lg"
-            asChild
-            onClick={onCtaClick}
-            className="text-lg px-8 py-6 mb-8 md:mb-0"
-          >
-            <Link to={"/marketplace"}>{ctaText}</Link>
-          </Button>
         </motion.div>
 
         {/* Animated Illustration */}

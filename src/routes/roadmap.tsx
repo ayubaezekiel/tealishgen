@@ -25,15 +25,17 @@ interface RoadmapItem {
 const roadmapData: RoadmapItem[] = [
   {
     phase: "Phase 1",
-    title: "Foundation",
-    description: "Establishing core platform functionality",
+    title: "Airdrop Launcher",
+    description:
+      "Establishing core platform functionality for airdrop management",
     status: "completed",
     color: "from-green-500 to-emerald-600",
     icon: <Lock size={24} />,
     items: [
-      "Visual Contract Builder MVP",
-      "Basic Tealish Integration",
-      "Community Building",
+      "CSV Upload & Validation",
+      "Airdrop Contract Deployment",
+      "Token Distribution",
+      "User Interface Enhancements",
     ],
   },
   {
@@ -61,6 +63,19 @@ const roadmapData: RoadmapItem[] = [
   },
   {
     phase: "Phase 4",
+    title: "Foundation",
+    description: "Establishing core platform functionality",
+    status: "upcoming",
+    color: "from-green-500 to-emerald-600",
+    icon: <Lock size={24} />,
+    items: [
+      "Visual Contract Builder MVP",
+      "Basic Tealish Integration",
+      "Community Building",
+    ],
+  },
+  {
+    phase: "Phase 5",
     title: "Ecosystem Growth",
     description: "Building the ecosystem",
     status: "future",
@@ -69,7 +84,7 @@ const roadmapData: RoadmapItem[] = [
     items: ["Marketplace Launch", "Developer SDK", "Partnership Program"],
   },
   {
-    phase: "Phase 5",
+    phase: "Phase 6",
     title: "Enterprise Solutions",
     description: "Scaling for enterprise",
     status: "future",
