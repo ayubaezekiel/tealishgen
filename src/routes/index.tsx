@@ -10,6 +10,7 @@ import {
   Settings,
   Database,
   Send,
+  Share2,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -47,7 +48,7 @@ const Index = ({
         "Choose from a variety of pre-built smart contract templates designed for different use cases.",
       icon: <PlusCircle size={24} />,
       details: [
-        "Browse categories like DeFi, NFT, DAO, and more",
+        "Browse categories like DeFi, NFT, DAO, Airdrops, and more",
         "Preview code and documentation before selecting",
         "Filter by complexity level and requirements",
       ],
@@ -94,6 +95,17 @@ const Index = ({
         "Real-time activity and transaction monitoring",
         "Easy contract upgrades and parameter adjustments",
         "Export analytics and usage reports",
+      ],
+    },
+    {
+      title: "Airdrop Launcher",
+      description:
+        "Distribute tokens to multiple wallets simultaneously with our powerful airdrop tool.",
+      icon: <Share2 size={24} />,
+      details: [
+        "Import wallet addresses via CSV or spreadsheet",
+        "Set custom distribution amounts or equal allocation",
+        "Schedule airdrops or execute immediately",
       ],
     },
   ];
@@ -224,9 +236,164 @@ const Index = ({
         </div>
       </section>
 
+      {/* New Airdrop Section */}
+      <section className="py-16 md:py-24 container mx-auto px-4">
+        <motion.div
+          className="text-center mb-16"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeIn}
+          custom={0}
+        >
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6 tracking-tight">
+            <span className="text-blue-600 dark:text-blue-400">
+              Airdrop Launcher
+            </span>{" "}
+            For Mass Distribution
+          </h2>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+            Distribute tokens to thousands of wallets in a single transaction.
+            Perfect for community rewards, investor distributions, and marketing
+            campaigns.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 max-w-5xl mx-auto">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeIn}
+            custom={1}
+            className="bg-white dark:bg-gray-800/50 shadow-lg rounded-2xl p-6 md:p-8 backdrop-blur-sm border border-gray-100 dark:border-gray-700/50"
+          >
+            <h3 className="text-xl md:text-2xl font-bold mb-4 text-foreground">
+              Key Features
+            </h3>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-3">
+                <CheckCircle
+                  size={20}
+                  className="text-green-500 mt-1 flex-shrink-0"
+                />
+                <span>Batch process thousands of transactions efficiently</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle
+                  size={20}
+                  className="text-green-500 mt-1 flex-shrink-0"
+                />
+                <span>Import wallet addresses via CSV or direct input</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle
+                  size={20}
+                  className="text-green-500 mt-1 flex-shrink-0"
+                />
+                <span>Configure equal or custom distribution amounts</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle
+                  size={20}
+                  className="text-green-500 mt-1 flex-shrink-0"
+                />
+                <span>Schedule airdrops for future execution</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle
+                  size={20}
+                  className="text-green-500 mt-1 flex-shrink-0"
+                />
+                <span>Track distribution progress in real-time</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle
+                  size={20}
+                  className="text-green-500 mt-1 flex-shrink-0"
+                />
+                <span>Verify transactions with detailed reports</span>
+              </li>
+            </ul>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeIn}
+            custom={2}
+            className="bg-white dark:bg-gray-800/50 shadow-lg rounded-2xl p-6 md:p-8 backdrop-blur-sm border border-gray-100 dark:border-gray-700/50"
+          >
+            <h3 className="text-xl md:text-2xl font-bold mb-4 text-foreground">
+              Perfect For
+            </h3>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-3">
+                <CheckCircle
+                  size={20}
+                  className="text-green-500 mt-1 flex-shrink-0"
+                />
+                <span>Token launches and community distributions</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle
+                  size={20}
+                  className="text-green-500 mt-1 flex-shrink-0"
+                />
+                <span>Investor token allocations</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle
+                  size={20}
+                  className="text-green-500 mt-1 flex-shrink-0"
+                />
+                <span>DAO governance token distributions</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle
+                  size={20}
+                  className="text-green-500 mt-1 flex-shrink-0"
+                />
+                <span>Reward programs and incentive campaigns</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle
+                  size={20}
+                  className="text-green-500 mt-1 flex-shrink-0"
+                />
+                <span>NFT holder rewards and bonuses</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle
+                  size={20}
+                  className="text-green-500 mt-1 flex-shrink-0"
+                />
+                <span>Community engagement initiatives</span>
+              </li>
+            </ul>
+          </motion.div>
+        </div>
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeIn}
+          custom={3}
+          className="mt-16 flex justify-center"
+        >
+          <button
+            onClick={onGetStarted}
+            className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-8 py-3 rounded-full flex items-center gap-2 shadow-lg transition-all"
+          >
+            <Share2 size={20} />
+            Try Airdrop Launcher
+          </button>
+        </motion.div>
+      </section>
+
       <FeaturesGrid />
     </motion.div>
   );
 };
-
-export default Index;
