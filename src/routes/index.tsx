@@ -385,7 +385,7 @@ const Index = ({
         >
           <button
             onClick={onGetStarted}
-            className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-8 py-3 rounded-full flex items-center gap-2 shadow-lg transition-all"
+            className="bg-gradient-to-r from-teal-500 to-cyan-400 hover:from-teal-600 hover:to-cyan-500 text-white font-medium px-8 py-3 rounded-full flex items-center gap-2 shadow-lg transition-all"
           >
             <Share2 size={20} />
             Try Airdrop Launcher

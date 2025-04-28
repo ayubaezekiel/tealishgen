@@ -64,7 +64,7 @@ const HeroSection = ({
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <motion.button
               onClick={onCtaClick}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-8 py-3 rounded-full flex items-center gap-2 justify-center shadow-lg transition-all"
+              className="bg-gradient-to-r from-teal-500 to-cyan-400 hover:from-teal-600 hover:to-cyan-500 text-white font-medium px-8 py-3 rounded-full flex items-center gap-2 justify-center shadow-lg transition-all"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
