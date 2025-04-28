@@ -48,7 +48,7 @@ const HeroSection = ({
               </div>
               <div>
                 <h3 className="font-semibold text-blue-700 dark:text-blue-300 mb-1">
-                  New: Airdrop Launcher
+                  Airdrop Launcher
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300 text-sm md:text-base">
                   Easily distribute tokens to multiple wallet addresses in one
